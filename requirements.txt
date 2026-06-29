@@ -1,0 +1,7 @@
+pandas
+numpy
+akshare
+pyyaml
+python-dotenv
+schedule
+requests

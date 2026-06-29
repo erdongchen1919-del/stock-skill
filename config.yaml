@@ -1,0 +1,20 @@
+market: "A"   # "A" = A 股（沪深），"HK" = 港股, "BOTH" = 两者
+mode: "paper"  # paper 或 live （live 时需实现/配置真实 broker adapter）
+universe:
+  - "600519"    # 支持多种格式：600519 / 600519.SS / 600519.SH / 000001.SZ
+  - "000001.SZ"
+backtest:
+  start: "2022-01-01"
+  end: "2023-12-31"
+strategy:
+  lookback_days: 20
+  top_n: 5
+risk:
+  risk_per_trade: 0.01
+  stop_atr_multiplier: 3
+  max_position_pct: 0.05
+broker:
+  provider: simulator
+  sim_account_balance: 100000
+alerts:
+  webhook: ""   # 可填入钉钉/企业微信/Slack webhook URL
